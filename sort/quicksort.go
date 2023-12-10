@@ -3,18 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	arr := []int{20, 3, 11, 6, 7, 100, 20}
-
-	// 20 3 4 6 7 100 9 35 88
-	// 3 4 6 7 9 20 35 88 100
-	// 0 1 2 3 4 5 	6 	7 8
-	//
-
-	/*
-	   0  1  2  3  4  5    6
-	   20 3, 4, 6, 7, 100, 20
-
-	*/
+	arr := []int{-4, 0, 7, 4, 9, -5, -1, 0, -7, -1}
 
 	ans := quicksort(arr, 0, len(arr)-1)
 	fmt.Println(ans)
@@ -53,7 +42,7 @@ func partition(arr []int, low, high int) (int, []int) {
 		}
 		arr = swap(arr, pivot, j)
 		fmt.Println("final pivot", arr)
-		return i, arr
+		return j, arr
 	}
 	return -1, arr
 }
